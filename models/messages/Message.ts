@@ -2,6 +2,7 @@
 * @file Declares Message data type representing relationship between
 * users and messages, as in user messages another user
 */
+
 import User from "../users/User";
 
 /**
@@ -10,7 +11,7 @@ import User from "../users/User";
 * @property {string} message Message content
 * @property {User} sender User sending the message
 * @property {User} receiver User receiving the message
-@property {Date} sentOn Date on which the message was sent
+* @property {Date} sentOn Date on which the message was sent
 */
 export default interface Message {
     message: string,

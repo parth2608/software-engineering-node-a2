@@ -1,9 +1,11 @@
 /**
 * @file Controller RESTful Web service API for bookmarks resource
 */
-import {Express, Request, Response} from "express";
 import BookmarkDao from "../daos/BookmarkDao";
+import Bookmark from "../models/bookmarks/Bookmark";
+import {Express, Request, Response} from "express";
 import BookmarkControllerI from "../interfaces/BookmarkControllerI";
+
 
 /**
 * @class TuitController Implements RESTful Web service API for bookmarks resource.

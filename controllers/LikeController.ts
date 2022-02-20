@@ -1,12 +1,14 @@
 /**
 * @file Controller RESTful Web service API for likes resource
 */
-import {Express, Request, Response} from "express";
 import LikeDao from "../daos/LikeDao";
+import Like from "../models/likes/Like";
+import {Express, Request, Response} from "express";
 import LikeControllerI from "../interfaces/LikeControllerI";
 
+
 /**
-* @class TuitController Implements RESTful Web service API for likes resource.
+* @class LikeController Implements RESTful Web service API for likes resource.
 * Defines the following HTTP endpoints:
 * <ul>
 *     <li>GET /api/users/:uid/likes to retrieve all the tuits liked by a user
@@ -30,7 +32,7 @@ private static likeController: LikeController | null = null;
 * Creates singleton controller instance
 * @param {Express} app Express instance to declare the RESTful Web service
 * API
-* @return TuitController
+* @return LikeController
 */
 public static getInstance = (app: Express): LikeController => {
     if(LikeController.likeController === null) {
