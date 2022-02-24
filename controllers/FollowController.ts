@@ -12,8 +12,8 @@ import FollowControllerI from "../interfaces/FollowControllerI";
 * <ul>
 *     <li>POST /api/users/:followerUid/follows/:followingUid to create a new follow
 *      by making a user follow another user</li>
-*     <li>GET /api/users/:uid/followers/ to retrieve all the users following a user</li>
-*     <li>GET /api/users/:uid/following/ to retrieve all the users being followed by a user</li>
+*     <li>GET /api/users/:uid/followers to retrieve all the users following a user</li>
+*     <li>GET /api/users/:uid/following to retrieve all the users being followed by a user</li>
 *     <li>DELETE /api/users/:followerUid/unfollows/:followingUid to remove a follow by
 *      making a user unfollow another user</li>
 * </ul>
@@ -36,8 +36,8 @@ public static getInstance = (app: Express): FollowController => {
             FollowController.followController = new FollowController();
             app.post("/api/users/:followerUid/follows/:followingUid", FollowController.followController.followUser);
             app.delete("/api/users/:followerUid/unfollows/:followingUid", FollowController.followController.unfollowUser);
-            app.get("/api/users/:uid/followers/", FollowController.followController.findAllFollowers);
-            app.get("/api/users/:uid/following/", FollowController.followController.findAllFollowing);
+            app.get("/api/users/:uid/followers", FollowController.followController.findAllFollowers);
+            app.get("/api/users/:uid/following", FollowController.followController.findAllFollowing);
         }
         return FollowController.followController;
     }
