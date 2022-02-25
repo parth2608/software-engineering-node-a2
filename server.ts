@@ -23,7 +23,7 @@ import FollowController from "./controllers/FollowController";
 import mongoose from "mongoose";
 
 // connect to the database
-mongoose.connect("mongodb+srv://parth2608:Password12345@cluster0.k6ihl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://parth2608:"+process.env.PASSWORD+"@cluster0.heqnl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 import bodyParser from "body-parser";
 
 const app = express();
